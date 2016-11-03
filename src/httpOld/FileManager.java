@@ -7,9 +7,9 @@ public class FileManager {
     private String path;
 
     private static ConcurrentHashMap<String, byte[]> map = new ConcurrentHashMap<String, byte[]>();
-   // время создания кэша
+   // РІСЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ РєСЌС€Р°
     private static long startMap=System.currentTimeMillis();
-     //класс считает врямя жизни кеша
+     //РєР»Р°СЃСЃ СЃС‡РёС‚Р°РµС‚ РІСЂСЏРјСЏ Р¶РёР·РЅРё РєРµС€Р°
     TimeManager tm =new TimeManager();
 
     public FileManager(String path) {
@@ -33,7 +33,7 @@ public class FileManager {
                     f.close();
                 }
                 map.put(url, buf);
-                // фиксирую время создания кеша
+                // С„РёРєСЃРёСЂСѓСЋ РІСЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ РєРµС€Р°
                 startMap=System.currentTimeMillis();
                 return buf;
             }
