@@ -9,7 +9,7 @@ public class FileManager {
     private static ConcurrentHashMap<String, byte[]> map = new ConcurrentHashMap<String, byte[]>();
    // время создания кэша
     private static long startMap=System.currentTimeMillis();
-     //класс считает врямя жизни кеша
+     //класс считает время жизни кеша
     TimeManager tm =new TimeManager();
 
     public FileManager(String path) {
